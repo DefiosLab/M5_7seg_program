@@ -62,8 +62,9 @@ void frame_recv_callback(int cmd, const uint8_t *buf, int len)
 // カメラの初期設定
 void camera_init()
 {
-  uart_frame_init(13, 14, 1500000);
+  // uart_frame_init(13, 14, 1500000);
   // uart_frame_init(36, 26, 1500000);
+  uart_frame_init(33, 32, 1500000);
   jpeg_fream_queue = xQueueCreate(2, sizeof(JpegFrame_t));
 }
 
